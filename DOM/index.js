@@ -14,8 +14,15 @@ let dom = {
         })
         return element
     },
+    //找当前元素的下标  当前元素的父元素的所有子元素  遍历判断相同元素 相同项的index
     index: function (element) {
-
+        let siblings = element.parentNode.children
+        for (let index = 0; index < siblings.length; index++) {
+            if (siblings[index] === element) {
+                return index
+            }
+        }
+        return -1
     },
     uniqueClass: function () {
 
