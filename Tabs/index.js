@@ -26,7 +26,7 @@ class Tabs {
             //获取nav下标
             //获取所有panel 方便找对应panel
             let children = this.options.element.querySelelctor(this.options.panesSelector).children
-            //为当前元素 加焦点状态
+            //为当前元素 加class 实现焦点状态
             dom.uniqueClass(el, this.options.activeClassName)
             dom.uniqueClass(children[index], this.options.activeClassName)
 
