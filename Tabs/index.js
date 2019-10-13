@@ -25,8 +25,9 @@ class Tabs {
             let index = dom.index(el)
             //获取nav下标
             //获取所有panel 方便找对应panel
-            let children = this.options.element.querySelelctor(this.options.panesSelector).children
+            let children = this.options.element.querySelector(this.options.panesSelector).children
             //为当前元素 加class 实现焦点状态
+            console.log('chilren' + children)
             dom.uniqueClass(el, this.options.activeClassName)
             dom.uniqueClass(children[index], this.options.activeClassName)
 
@@ -35,8 +36,8 @@ class Tabs {
         return this
     }
     setDefaultTab() {
-        //默认状态
-        this.options.element.querySelelctor(`$(this.options.navSelector)>li:first-child`).click()
+        //默认Tab状态
+        this.options.element.querySelector(`$(this.options.navSelector)>li:first-child`).click()
         return this
     }
 }
