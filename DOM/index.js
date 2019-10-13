@@ -1,3 +1,4 @@
+//一个小DOM库 封装一些dom操作方法 辅助去更好的实现造轮子
 let dom = {
     //事件委托  当触发事件 判断是不是当前父元素的子元素 如果是 则执行fn 
     on: function (element, eventType, selector, fn) {
