@@ -24,11 +24,24 @@ class Carousel {
 
 
         //pre/next点击 显示上/下一个img
+        this.pre.onclick = e => {
+            let index = this.dots.indexOf(this.root.querySelector('.dots .active')) //当前dot 下标
+            index = (index - 1 + this.dots.length) % this.dots.length
+            this.setDot(index)
+            this.showPage(index)
+        }
+        this.next.onclick = e => {
+            let index = this.dots.indexOf(this.root.querySelector('.dots .active')) //当前dot 下标
+            index = (index + 1) % this.dots.length
+            this.setDot(index)
+            this.showPage(index)
+        }
+
 
     }
 
-    //用到的方法们
-    //add 焦点状态
+    //用到的公共方法们
+    //给触发这个 add 焦点状态
     setDot(index) {
         this.dots.forEach(dot => {
             dot.classList.remove('active')
