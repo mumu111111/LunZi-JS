@@ -7,7 +7,7 @@ class Carousel {
         this.dotCt = root.querySelector('.dots')
         this.dots = Array.from(root.querySelectorAll('.dots span'))
         this.pre = root.querySelector('.pre')
-        this.next = roor.querySelector('.next')
+        this.next = root.querySelector('.next')
         this.bind()
     }
     //绑定事件 似mounted
@@ -57,3 +57,5 @@ class Carousel {
     }
 
 }
+
+new Carousel(document.querySelector('.carousel'))
