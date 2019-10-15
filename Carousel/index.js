@@ -28,12 +28,14 @@ class Carousel {
     }
 
     //用到的方法们
+    //add 焦点状态
     setDot(index) {
         this.dots.forEach(dot => {
             dot.classList.remove('active')
             this.dots[index].classList.add('active')
         })
     }
+    //显示图片 
     showPage(index) {
         this.panels.forEach(panel => {
             panel.style.zIndex = 0
