@@ -4,8 +4,8 @@ class Tabs {
         //data
         let defaultOptions = {
             element: '',
-            navSelector: '[data-role="tabs-nav"]',
-            panesSelector: '[data-role="tabs-panes"]',
+            navSelector: '[data-role="tab-nav"]',
+            panesSelector: '[data-role="tab-panes"]',
             activeClassName: 'active'
         }
         //合并data
@@ -21,7 +21,7 @@ class Tabs {
     }
     //tab点击切换事件
     bindEvents() {
-        dom.on(this.options.element, 'click', `${this.options.navSelelctor}>li`, (e, el) => {
+        dom.on(this.options.element, 'click', `${this.options.navSelector}>li`, (e, el) => {
             let index = dom.index(el)
             //获取nav下标
             //获取所有panel 方便找对应panel
@@ -36,23 +36,14 @@ class Tabs {
         return this
     }
     setDefaultTab() {
+        console.log(1)
         //默认Tab状态
-        this.options.element.querySelector(`$(this.options.navSelector)>li:first-child`).click()
+        console.log('第一个tab元素对象' + this.options.element.querySelector(`${this.options.navSelector}>li:first-child`))
+
+        this.options.element.querySelector(`${this.options.navSelector}>li:first-child`).click()
         return this
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

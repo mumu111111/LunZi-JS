@@ -26,7 +26,7 @@ let dom = {
         return -1
     },
     //当前元素 添加class  首先将同级所有元素全都删除class  再对当前元素加class 
-    uniqueClass: function (element, classNode) {
+    uniqueClass: function (element, className) {
         dom.every(element.parentNode.children, el => {
             el.classList.remove(className)
         })
