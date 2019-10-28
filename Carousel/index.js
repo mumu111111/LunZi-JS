@@ -15,7 +15,7 @@ class Carousel {
         //dot点击 显示当前img
         //事件委托 
         this.dotCt.onclick = e => {
-            if (e.target !== 'SAPN') return //判断是不是子元素span
+            if (e.target !== 'SPAN') return //判断是不是子元素span
             let index = this.dots.indexOf(e.target) //找下标
             //增加焦点状态 + 展示点击dot对应img
             this.setDot(index)
